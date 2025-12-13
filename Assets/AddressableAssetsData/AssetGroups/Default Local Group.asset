@@ -16,7 +16,7 @@ MonoBehaviour:
   m_GUID: b1db8b61bd22ea247ac3cdbc8ee5ab7c
   m_SerializeEntries:
   - m_GUID: 42f8c295c45897b43b9cb45fded38f0b
-    m_Address: Assets/Prefabs/Fireball.prefab
+    m_Address: Fireball
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
