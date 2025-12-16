@@ -9,8 +9,7 @@ public class AssetBundleLoader
 
     public async Task LoadBundle()
     {
-        UnityWebRequest request = UnityWebRequestAssetBundle.GetAssetBundle(
-            Constants.AssetbundlePath, new Hash128(), 0);
+        UnityWebRequest request = UnityWebRequestAssetBundle.GetAssetBundle(Constants.AssetbundlePath);
         await processRequest(request);
         _assetBundle = DownloadHandlerAssetBundle.GetContent(request);
         request.Dispose();
