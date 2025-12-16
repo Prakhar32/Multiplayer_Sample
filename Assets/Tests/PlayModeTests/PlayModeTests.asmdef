@@ -7,7 +7,8 @@
         "Unity.TextMeshPro",
         "ScriptsAssembly",
         "PhotonRealtime",
-        "PhotonUnityNetworking"
+        "PhotonUnityNetworking",
+        "Unity.Addressables"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
