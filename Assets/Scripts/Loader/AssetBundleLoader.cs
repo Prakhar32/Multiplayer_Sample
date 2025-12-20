@@ -2,22 +2,29 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Net.Http;
+using System.Collections;
 
-public class AssetBundleLoader
+internal class AssetBundleLoader
 {
     private AssetBundle _assetBundle;
 
-    public async Task LoadBundle()
+    internal AssetBundleLoader(MonoBehaviour mono)
     {
-        UnityWebRequest request = UnityWebRequestAssetBundle.GetAssetBundle(Constants.AssetbundlePath);
-        await processRequest(request);
+        if (mono == null)
+            throw new System.NullReferenceException();
+    }
+
+    public IEnumerator LoadBundle()
+    {
+        UnityWebRequest request = UnityWebRequestAssetBundle.GetAssetBundle(BootstrapSceneConstants.AssetbundlePath);
+        yield return processRequest(request);
         _assetBundle = DownloadHandlerAssetBundle.GetContent(request);
         request.Dispose();
     }
 
-    private async Task processRequest(UnityWebRequest request)
+    private IEnumerator processRequest(UnityWebRequest request)
     {
-        await request.SendWebRequest();
+        yield return request.SendWebRequest();
         if (request.result != UnityWebRequest.Result.Success)
             throw new HttpRequestException(request.error);
     }

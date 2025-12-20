@@ -29,6 +29,6 @@ public class CreateRoom : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel(Constants.GameplayScene);
+        PhotonNetwork.LoadLevel(CommonConstants.GameplayScene);
     }
 }

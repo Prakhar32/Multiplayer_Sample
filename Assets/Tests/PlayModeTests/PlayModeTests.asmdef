@@ -5,10 +5,11 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "Unity.TextMeshPro",
-        "ScriptsAssembly",
         "PhotonRealtime",
         "PhotonUnityNetworking",
-        "Unity.Addressables"
+        "Unity.Addressables",
+        "Bootstrap",
+        "Constants"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
