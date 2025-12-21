@@ -17,7 +17,7 @@ public class BootstapSceneTests
         g.AddComponent<DependencyLoader>();
         bool gameplaySceneLoaded = false;
         SceneManager.activeSceneChanged += (scene1, scene2) => { 
-            if(scene2.name.Equals(CommonConstants.GameplayScene))
+            if(scene2.name.Equals(BootstrapSceneConstants.GameplayScene))
                 gameplaySceneLoaded = true;
         };
 

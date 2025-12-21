@@ -22,7 +22,7 @@ namespace Lobby
 
         public override void OnJoinedLobby()
         {
-            PhotonNetwork.LoadLevel("LobbyScene");
+            PhotonNetwork.LoadLevel(NetworkingConstants.LobbySceneName);
         }
     }
 }

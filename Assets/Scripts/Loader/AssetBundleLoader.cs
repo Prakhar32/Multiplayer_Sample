@@ -16,7 +16,8 @@ internal class AssetBundleLoader
 
     public IEnumerator LoadBundle()
     {
-        UnityWebRequest request = UnityWebRequestAssetBundle.GetAssetBundle(BootstrapSceneConstants.AssetbundlePath);
+        UnityWebRequest request = UnityWebRequestAssetBundle.GetAssetBundle(
+            BootstrapSceneConstants.AssetbundlePath, new Hash128());
         yield return processRequest(request);
         _assetBundle = DownloadHandlerAssetBundle.GetContent(request);
         request.Dispose();

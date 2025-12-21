@@ -34,7 +34,7 @@ public class DependencyLoader : MonoBehaviour
     private void loadScene()
     {
         SceneManager.sceneLoaded += SceneManager_sceneLoaded;
-        SceneManager.LoadSceneAsync(CommonConstants.GameplayScene, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(BootstrapSceneConstants.GameplayScene, LoadSceneMode.Additive);
     }
 
     private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
